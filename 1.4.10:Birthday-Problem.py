@@ -23,8 +23,13 @@ for x in k:
 	run_permutation(x)
 
 
-plt.plot(k_values, prob)
-plt.plot(k_values, prob_complement)
+plt.plot(k_values, prob, label="No shared birthday")
+plt.plot(k_values, prob_complement, label="At least one shared birthday")
+
+plt.xlabel("Number of people (k)")
+plt.ylabel("Probability of event")
+plt.title("Birthday Problem")
+plt.legend()
 plt.show()
 
 
